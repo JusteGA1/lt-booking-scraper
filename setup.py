@@ -9,5 +9,12 @@ setup(
     author='Juste Gaviene',
     author_email='juste.gaviene@gmail.com',
     description='Booking.com scraper for Lithuania hotels. Scrapes cities, '
-                'hotels info and prices.'
+                'hotels info and prices.',
+    install_requires=[
+        'requests',
+        'bs4',
+        'pandas',
+        'fake_headers',
+        'nums_from_string'
+    ]
 )

@@ -84,7 +84,8 @@ class BookingHotels:
 
             page_number += 25
 
-        return pd.DataFrame(result)
+        result_df = pd.DataFrame(result)
+        return result_df.drop_duplicates()
 
     def extract_hotel_data(self, hotel) -> dict:
         """
@@ -178,7 +179,8 @@ class BookingHotelsPrices:
 
             page_number += 25
 
-        return pd.DataFrame(result)
+        result_df = pd.DataFrame(result)
+        return result_df.drop_duplicates()
 
     def extract_hotel_price(self, hotel) -> dict:
         """

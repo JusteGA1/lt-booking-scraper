@@ -74,8 +74,9 @@ class BookingHotels:
             result["title"] = title_tag.text.strip()
 
             location_tag = hotel.find("a", "bui-link")
-            result["longitude"], result["latitude"] = location_tag \
-                .get("data-coords").split(",")
+            longitude, latitude = location_tag.get("data-coords").split(",")
+            result["longitude"], result["latitude"] = \
+                round(float(longitude), 6), round(float(latitude), 6)
 
             distance_tag = hotel.select_one(
                 "div.sr_card_address_line span:nth-of-type(2)")

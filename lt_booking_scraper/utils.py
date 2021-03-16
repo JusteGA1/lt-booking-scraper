@@ -3,7 +3,7 @@ from fake_headers import Headers
 import nums_from_string
 
 
-def generate_headers():
+def generate_headers() -> dict:
     """Generates random headers for scraping websites."""
     headers = Headers()
     result = headers.generate()
